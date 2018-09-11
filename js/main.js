@@ -4,6 +4,12 @@ const todoList = document.getElementById('todo-list');
 const todoItem = document.querySelectorAll('.todo-item');
 
 todoForm.addEventListener('submit', addToDoItem);
+main();
+
+function main() {
+    todoForm.addEventListener('submit', addToDoItem);
+    todoItem.forEach(item => bindEvents(item));
+}
 
 function bindEvents(todoItem) {
     const checkbox = todoItem.querySelector('.checkbox');

@@ -47,7 +47,9 @@ function editTodoItem() {
 }
 
 function deleteTodoItem() {
-    
+    const listItem = this.parentNode;
+    todoList.removeChild(listItem);
+    //console.log(listItem);
 }
 
 function createToDoItem(title) {
